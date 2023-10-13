@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+
+
+<script>
+
+class Employee{
+	
+	constructor(name,salary){
+		this.name=name;
+		this.salary=salary;
+	}
+	
+	annualsalary(){
+		
+		
+		let totalSalary=12*this.salary
+
+		document.write(`Annualsalary is : ${totalSalary}`)
+	}
+	
+}
+
+let ans1=new Employee('gopi',20000)
+
+ ans1.annualsalary()
+ 
+ document.write(`<br>---------`)
+
+class Manager extends Employee{
+	
+	constructor(name,salary,bouns){
+		super(name,salary);
+		this.bouns=bouns;
+	}
+	annualsalary(){
+		
+		
+		let totalSalary=12*(this.salary+this.bouns)
+
+		document.write(`<br><br>Annualsalary with add in bouns: ${totalSalary}`)
+	}
+	
+}
+
+let ans2=new Manager('gopi',20000,1500)
+
+
+ans2.annualsalary()
+
+</script>
+</body>
+</html>
